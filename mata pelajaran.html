@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mata Pelajaran</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content {
+      flex: 1;
+    }
+    .subject-content {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-gray-800 text-white p-4 flex justify-between items-center">
+    <div class="flex items-center">
+      <img alt="Logo of the website" class="w-12 h-12 mr-4" height="50" src="logo e-learning.jpg" width="50"/>
+    </div>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a class="hover:text-gray-400" href="index.html">Beranda</a></li>
+        <li><a class="hover:text-gray-400" href="halaman login.html">Login</a></li>
+        <li><a class="hover:text-gray-400" href="dashboard.html">Dashboard</a></li>
+        <li><a class="hover:text-gray-400" href="mata pelajaran.html">Mata Pelajaran</a></li>
+        <li><a class="hover:text-gray-400" href="halaman kuis.html">Kuis</a></li>
+        <li><a class="hover:text-gray-400" href="pengaturan.html">Pengaturan</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="content container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">Mata Pelajaran</h1>
+    <div class="flex flex-wrap justify-center gap-8">
+      <!-- Matematika -->
+      <div class="subject bg-white p-8 rounded-lg shadow-lg text-center transform transition duration-300 hover:scale-105 w-full md:w-1/3 lg:w-1/4">
+        <div class="mb-6">
+          <i class="fas fa-calculator text-6xl text-blue-500 mb-4"></i>
+          <h2 class="text-3xl font-bold mb-4 text-gray-800">Matematika</h2>
+        </div>
+        <p class="mb-6 text-gray-600">Pelajari konsep dasar matematika dengan pendekatan interaktif dan menyenangkan.</p>
+        <button onclick="toggleContent('matematika')" class="detail-link bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block">Lihat Detail</button>
+      </div>
+
+      <!-- IPA -->
+      <div class="subject bg-white p-8 rounded-lg shadow-lg text-center transform transition duration-300 hover:scale-105 w-full md:w-1/3 lg:w-1/4">
+        <div class="mb-6">
+          <i class="fas fa-flask text-6xl text-green-500 mb-4"></i>
+          <h2 class="text-3xl font-bold mb-4 text-gray-800">IPA</h2>
+        </div>
+        <p class="mb-6 text-gray-600">Eksplorasi ilmu pengetahuan alam melalui percobaan dan penelitian mendalam.</p>
+        <button onclick="toggleContent('ipa')" class="detail-link bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block">Lihat Detail</button>
+      </div>
+
+      <!-- Bahasa Inggris -->
+      <div class="subject bg-white p-8 rounded-lg shadow-lg text-center transform transition duration-300 hover:scale-105 w-full md:w-1/3 lg:w-1/4">
+        <div class="mb-6">
+          <i class="fas fa-language text-6xl text-purple-500 mb-4"></i>
+          <h2 class="text-3xl font-bold mb-4 text-gray-800">Bahasa Inggris</h2>
+        </div>
+        <p class="mb-6 text-gray-600">Pelajari bahasa Inggris dengan metode komunikatif dan praktis.</p>
+        <button onclick="toggleContent('inggris')" class="detail-link bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block">Lihat Detail</button>
+      </div>
+    </div>
+
+    <!-- Matematika Content -->
+    <div id="matematika-content" class="subject-content mt-12">
+      <h2 class="text-3xl font-bold text-gray-800">Materi Matematika</h2>
+      <p class="text-lg text-gray-600">Matematika adalah ilmu yang mempelajari tentang angka, struktur, ruang, dan perubahan. Berikut merupakan penjelasan materi:</p>
+      <p><a href="https://youtu.be/j3-vxTMQlXM?si=Jz1QOuuqXgPBl5IF" class="text-blue-500" target="_blank">Lihat video pembelajaran Matematika</a> di YouTube untuk penjelasan lebih lanjut.</p>
+      <p>Modul Ajar: <a href="https://www.scribd.com/document/709659689/MODUL-AJAR-MATEMATIKA-KELAS-VII-KURIKULUM-MERDEKA" class="text-blue-500" target="_blank">Link Modul Ajar Matematika</a></p>
+    </div>
+
+    <!-- IPA Content -->
+    <div id="ipa-content" class="subject-content mt-12">
+      <h2 class="text-3xl font-bold text-gray-800">Materi IPA</h2>
+      <p class="text-lg text-gray-600">Ilmu Pengetahuan Alam (IPA) mencakup biologi, fisika, dan kimia. Berikut merupakan penjelasan materi:</p>
+      <p><a href="https://youtu.be/x4dPya-ynyY?si=plX_724BtJpIMd4x" class="text-blue-500" target="_blank">Lihat video pembelajaran IPA</a> di YouTube untuk penjelasan lebih lanjut.</p>
+      <p>Modul Ajar: <a href="https://repositori.kemdikbud.go.id/6179/1/MODUL%20B%20IPA%20SMP.pdf" class="text-blue-500" target="_blank">Link Modul Ajar IPA</a></p>
+    </div>
+
+    <!-- Bahasa Inggris Content -->
+    <div id="inggris-content" class="subject-content mt-12">
+      <h2 class="text-3xl font-bold text-gray-800">Materi Bahasa Inggris</h2>
+      <p class="text-lg text-gray-600">Bahasa Inggris adalah bahasa internasional yang digunakan dalam komunikasi global. Berikut adalah merupakan penjelasan materi:</p>
+      <p><a href="https://youtu.be/q3GcPs3nClQ?si=gsLdFa2yQlxsxyQc" class="text-blue-500" target="_blank">Lihat video pembelajaran Bahasa Inggris</a> di YouTube untuk penjelasan lebih lanjut.</p>
+      <p>Modul Ajar: <a href="https://files1.simpkb.id/guruberbagi/rpp/412153-1674105730.pdf" class="text-blue-500" target="_blank">Link Modul Ajar Bahasa Inggris</a></p>
+    </div>
+  </div>
+
+  <footer class="bg-gray-800 text-white text-center p-4">
+    <p>&copy; 2024. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleContent(subject) {
+      // Hide all content sections
+      const allContents = document.querySelectorAll('.subject-content');
+      allContents.forEach(content => content.style.display = 'none');
+
+      // Show the selected content section
+      const selectedContent = document.getElementById(subject + '-content');
+      if (selectedContent) {
+        selectedContent.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
